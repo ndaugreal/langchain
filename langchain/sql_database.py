@@ -213,3 +213,7 @@ class SQLDatabase:
         except SQLAlchemyError as e:
             """Format the error message"""
             return f"Error: {e}"
+
+    def __deepcopy__(self, memo):
+        # Assuming DB does not need to be deep copied
+        return self
